@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Este ficheiro contém as configurações necessárias para uma App baseada na estrutura apresentada.
+	Alterando e adicionando valores (quando aplicável) ao ficheiro atualm teremos uma App com um aspeto
+	gráfico e dados diferentes.
+	
+	Atenção, as imagens que aqui são referidas encontram-se todas elas nos resources, dado que a App ainda não
+	está adaptada por forma a que estejam contidas no dispositivo ou alojados remotamente. Esta situação brevemente
+	será alterada.
+	
+	É ainda de notar que passará a haver update do ficheiro de configs, e algumas configurações aqui descritas passarão
+	a ser recebidas durante as consultas ao servidor, como por exemplo: as imagens de fundo principais e de cada fonte,
+	os icones das categorias, os pins do mapa, entre outros. 
+ -->
+ 
+<IGEOConfigs>
+
+	<AppConfigs>
+		<Name><![CDATA[Património]]></Name>
+		<URLUpdate></URLUpdate>
+		<PackageName><![CDATA[com.bitcliq.igeo.ui_patrimonio]]></PackageName>
+		<URLRequests><![CDATA[http://dadosabertos.bitcliq.com/GeoDas.ashx?tid=PAT]]></URLRequests>
+		<URLRequestsSources><![CDATA[http://dadosabertos.bitcliq.com/GeoDasSources.ashx?t=PAT]]></URLRequestsSources>
+		<URLRequestsCategories><![CDATA[http://dadosabertos.bitcliq.com/GeoDasCategories.ashx?t=PAT]]></URLRequestsCategories>
+		<URLRequestAppDefaults><![CDATA[http://dadosabertos.bitcliq.com/GeoDasEntity.ashx?t=PAT]]></URLRequestAppDefaults>
+		<AppColor><![CDATA[#b37202]]></AppColor>
+	</AppConfigs>
+	
+	
+	<ScreensConfigs>
+	
+		<!-- Configurações da home -->
+		<HomeScreenConfigs>
+			<TopImage><![CDATA[pat_header_patrimonio]]></TopImage>
+			<BackgroundForSource>
+				<BackgroundForSourceEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<URLBG><![CDATA[pat_bg_pelourinho]]></URLBG>
+				</BackgroundForSourceEntry>
+                <BackgroundForSourceEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<URLBG><![CDATA[pat_bg_farois]]></URLBG>
+				</BackgroundForSourceEntry>
+				<DefaultBackground><![CDATA[pat_bg_home]]></DefaultBackground>
+			</BackgroundForSource>
+			<HomeButtons>
+				<ButtonElementConfig>
+					<ButtonName><![CDATA[list_sources]]></ButtonName>
+					<ImageNormal><![CDATA[pat_portugal]]></ImageNormal>
+					<ImageClick><![CDATA[pat_portugal_click]]></ImageClick>
+				</ButtonElementConfig>
+				<ButtonElementConfig>
+					<ButtonName><![CDATA[near_me]]></ButtonName>
+					<ImageNormal><![CDATA[pat_perto_de_mim]]></ImageNormal>
+					<ImageClick><![CDATA[pat_perto_de_mim_click]]></ImageClick>
+				</ButtonElementConfig>
+				<ButtonElementConfig>
+					<ButtonName><![CDATA[explore]]></ButtonName>
+					<ImageNormal><![CDATA[pat_explore]]></ImageNormal>
+					<ImageClick><![CDATA[pat_explore_click]]></ImageClick>
+				</ButtonElementConfig>
+			</HomeButtons>
+			<SubTitleBg><![CDATA[pat_roundbackground]]></SubTitleBg>
+		</HomeScreenConfigs>
+		
+		
+		
+		
+		<!-- Configurações da info -->
+		<InfoScreenConfigs>
+		</InfoScreenConfigs>
+        
+        
+        
+        
+        <!-- Configurações da seleção da source-->
+		<ListSourcesScreenConfig>
+            <TopImage><![CDATA[pat_header_patrimonio]]></TopImage>
+			<SelectionColor><![CDATA[#88b37202]]></SelectionColor>
+		</ListSourcesScreenConfig>
+		
+		
+		
+		
+		<!-- Configurações da escolha de local -->
+		<SelectLocationScreenConfigs>
+			<TopImage><![CDATA[pat_header_patrimonio]]></TopImage>
+            <Buttons>
+                <ButtonElementConfig>
+                    <ButtonName><![CDATA[selection]]></ButtonName>
+                    <ImageNormal><![CDATA[pat_round_box]]></ImageNormal>
+                    <ImageClick><![CDATA[pat_round_box_selected]]></ImageClick>
+                </ButtonElementConfig>
+                <ButtonElementConfig>
+                    <ButtonName><![CDATA[search]]></ButtonName>
+                    <ImageNormal><![CDATA[pat_roundbackground_btn_map]]></ImageNormal>
+                    <ImageClick><![CDATA[pat_roundbackground_btn_map]]></ImageClick>
+                </ButtonElementConfig>
+            </Buttons>
+		</SelectLocationScreenConfigs>
+		
+		
+		
+		
+		<!-- Configurações da escolha de categorias -->
+		<OptionsScreenConfig>
+			<TopImage><![CDATA[pat_header_patrimonio]]></TopImage>
+			<ButtonElementConfig>
+				<ButtonName><![CDATA[ok]]></ButtonName>
+				<ImageNormal><![CDATA[pat_roundbackground_btn_map]]></ImageNormal>
+				<ImageClick><![CDATA[pat_roundbackground_btn_map_click]]></ImageClick>
+			</ButtonElementConfig>
+			<ButtonsForCategory>
+				<ButtonsForCategoryEntry>
+				</ButtonsForCategoryEntry>
+				<DefaultButtonCategory>
+					<ButtonElementConfig>
+						<ButtonName><![CDATA[generic]]></ButtonName>
+						<ImageNormal><![CDATA[pat_cat_default]]></ImageNormal>
+						<ImageClick><![CDATA[pat_cat_default_selected]]></ImageClick>
+					</ButtonElementConfig>
+				</DefaultButtonCategory>
+			</ButtonsForCategory>
+		</OptionsScreenConfig>
+		
+		
+		
+		<!-- Configurações do mapa -->
+		<NativeMapScreenConfig>
+			<PinColorsForCategory>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<CategoryID><![CDATA[1]]></CategoryID>
+					<Color><![CDATA[YELLOW]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<CategoryID><![CDATA[2]]></CategoryID>
+					<Color><![CDATA[BLUE]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<CategoryID><![CDATA[3]]></CategoryID>
+					<Color><![CDATA[MAGENTA]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<CategoryID><![CDATA[4]]></CategoryID>
+					<Color><![CDATA[ORANGE]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<CategoryID><![CDATA[5]]></CategoryID>
+					<Color><![CDATA[ROSE]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<CategoryID><![CDATA[6]]></CategoryID>
+					<Color><![CDATA[VIOLET]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<CategoryID><![CDATA[7]]></CategoryID>
+					<Color><![CDATA[GREEN]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<CategoryID><![CDATA[8]]></CategoryID>
+					<Color><![CDATA[CYAN]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<CategoryID><![CDATA[9]]></CategoryID>
+					<Color><![CDATA[AZURE]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[1]]></SourceID>
+					<CategoryID><![CDATA[0]]></CategoryID>
+					<Color><![CDATA[RED]]></Color>
+				</PinColorsForCategoryEntry>
+                
+                <PinColorsForCategoryEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<CategoryID><![CDATA[1]]></CategoryID>
+					<Color><![CDATA[YELLOW]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<CategoryID><![CDATA[2]]></CategoryID>
+					<Color><![CDATA[BLUE]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<CategoryID><![CDATA[3]]></CategoryID>
+					<Color><![CDATA[MAGENTA]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<CategoryID><![CDATA[4]]></CategoryID>
+					<Color><![CDATA[ORANGE]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<CategoryID><![CDATA[5]]></CategoryID>
+					<Color><![CDATA[ROSE]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<CategoryID><![CDATA[6]]></CategoryID>
+					<Color><![CDATA[VIOLET]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<CategoryID><![CDATA[7]]></CategoryID>
+					<Color><![CDATA[GREEN]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<CategoryID><![CDATA[8]]></CategoryID>
+					<Color><![CDATA[CYAN]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<CategoryID><![CDATA[9]]></CategoryID>
+					<Color><![CDATA[AZURE]]></Color>
+				</PinColorsForCategoryEntry>
+				<PinColorsForCategoryEntry>
+					<SourceID><![CDATA[2]]></SourceID>
+					<CategoryID><![CDATA[0]]></CategoryID>
+					<Color><![CDATA[RED]]></Color>
+				</PinColorsForCategoryEntry>
+                
+			</PinColorsForCategory>
+            <DefaultPinColor>
+                <Color><![CDATA[CYAN]]></Color>
+            </DefaultPinColor>
+		</NativeMapScreenConfig>
+		
+		
+		
+		
+		<!-- Configurações da lista -->
+		<ListScreenConfig>
+            <BackgroundForSource>
+                <BackgroundForSourceEntry>
+                    <SourceID><![CDATA[1]]></SourceID>
+                    <URLBG><![CDATA[pat_farois_right]]></URLBG>
+                    </BackgroundForSourceEntry>
+                <BackgroundForSourceEntry>
+                    <SourceID><![CDATA[2]]></SourceID>
+                    <URLBG><![CDATA[pat_pelourinho_right]]></URLBG>
+                </BackgroundForSourceEntry>
+                <DefaultBackground><![CDATA[pat_home_right]]></DefaultBackground>
+            </BackgroundForSource>
+		</ListScreenConfig>
+		
+		
+		
+		
+		<!-- Configurações dos detalhes -->
+		<DetailsScreenConfig>
+			<URLDefaultImage><![CDATA[pat_img_default_patrimonio]]></URLDefaultImage>
+		</DetailsScreenConfig>
+		
+	</ScreensConfigs>
+
+</IGEOConfigs>

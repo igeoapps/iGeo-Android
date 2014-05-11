@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ord_home_right" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/t_subtitle"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/logo_lista" />
+
+    <ListView
+        android:id="@+id/listViewDataItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tResults"
+        android:layout_marginLeft="46dp"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:listSelector="@android:color/transparent"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="10dp" >
+    </ListView>
+
+    <android.widget.TextView
+        android:id="@+id/tResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/t_subtitle"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/ord_roundbackground"
+        android:gravity="right"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:layout_marginTop="8dp"
+        android:text="0  registos"
+        android:textColor="#FFFFFF" />
+
+    <RelativeLayout
+        android:id="@+id/topView"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#0385fe"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true" >
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/ord_roundbackground_search"
+            android:ems="10"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:lines="1"
+            android:paddingLeft="15dp"
+            android:paddingRight="30dp"
+            android:textColor="#FFFFFF" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageView
+            android:id="@+id/bSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextSearch"
+            android:layout_alignRight="@+id/editTextSearch"
+            android:layout_alignTop="@+id/editTextSearch"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/pesquisa" />
+
+        <ImageView
+            android:id="@+id/bHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/home2" />
+
+        <ImageView
+            android:id="@+id/bMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editTextSearch"
+            android:layout_toRightOf="@+id/bHome"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/mapa" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/t_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tResults"
+        android:layout_below="@+id/topView"
+        android:background="@drawable/ord_roundbackground"
+        android:paddingBottom="6dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="6dp"
+        android:text="SUBTITLE"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible" />
+
+</RelativeLayout>
