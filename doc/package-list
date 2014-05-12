@@ -1,0 +1,8 @@
+com.bitcliq.igeo.core
+com.bitcliq.igeo.core.config
+com.bitcliq.igeo.core.datasource
+com.bitcliq.igeo.core.logs
+com.bitcliq.igeo.threads
+com.bitcliq.igeo.ui
+com.bitcliq.igeo.ui.places
+com.bitcliq.igeo.views

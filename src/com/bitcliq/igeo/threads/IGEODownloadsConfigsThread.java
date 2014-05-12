@@ -168,7 +168,7 @@ public class IGEODownloadsConfigsThread extends Thread {
 	private void downloadFinished() {
 		Log.i("-- IGEODownloads", "" + actualItem.url + " downloaded");
 		
-		actualItem.destinationFolder = "/" + actualItem.destinationFolder;
+		actualItem.finalName = "/" + actualItem.finalName;
 
 		actualState = IGEOThreadDownloadState.OnPause;
 
@@ -195,23 +195,23 @@ public class IGEODownloadsConfigsThread extends Thread {
 
 		switch (actualItem.type) {
 		case HomeBgImage:
-			IGEOConfigsManager.setHomeBgImageForSource(actualItem.srcID, actualItem.destinationFolder);
+			IGEOConfigsManager.setHomeBgImageForSource(actualItem.srcID, actualItem.finalName);
 			break;
 		case ListBGImage:
-			IGEOConfigsManager.setListBgImageForSource(actualItem.srcID, actualItem.destinationFolder);
+			IGEOConfigsManager.setListBgImageForSource(actualItem.srcID, actualItem.finalName);
 			break;
 		case CatIconNormal:
-			IGEOConfigsManager.setCatIconNormalForSourceAndCategory(actualItem.srcID, actualItem.catID, actualItem.destinationFolder);
+			IGEOConfigsManager.setCatIconNormalForSourceAndCategory(actualItem.srcID, actualItem.catID, actualItem.finalName);
 			break;
 		case CatIconSelected:
-			IGEOConfigsManager.setCatIconSelectedForSourceAndCategory(actualItem.srcID, actualItem.catID, actualItem.destinationFolder);
+			IGEOConfigsManager.setCatIconSelectedForSourceAndCategory(actualItem.srcID, actualItem.catID, actualItem.finalName);
 			break;
 		case CatPinImage:
 			
 			//No caso de ser um pin do mapa, além do url do pin atualiza também a cor do pin do mapa a apresentar no mapa e a cor
 			//do titulo a apresentar na lista. Fizemos desta forma para que não ocorram situações em que a cor já está disponível mas a imagem
 			//da legenda do mapa ainda está a ser descarregada dando assim lugar a inconsistências.
-			IGEOConfigsManager.setCatPinImageForSourceAndCategory(actualItem.srcID, actualItem.catID, actualItem.destinationFolder);
+			IGEOConfigsManager.setCatPinImageForSourceAndCategory(actualItem.srcID, actualItem.catID, actualItem.finalName);
 			
 			if(actualItem.colorHex!=null){
 				if(!actualItem.colorHex.equals("")){
@@ -293,7 +293,7 @@ public class IGEODownloadsConfigsThread extends Thread {
 			}
 
 			String url_str = actualItem.url;
-			String fileName = actualItem.destinationFolder;
+			String fileName = actualItem.finalName;
 			Log.i("-- IGEODownloads", "download from: " + url_str);
 			Log.i("-- IGEODownloads", "download to: " + fileName);
 

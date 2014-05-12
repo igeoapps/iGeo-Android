@@ -121,16 +121,6 @@ public class GEOAppConfigs implements Serializable
 
 
 	/**
-	 * Obtém a versão das configurações.
-	 * Não é usado nesta versão mas pode posteriormente ser usada para comparar com uma versão das configurações
-	 * @return Versão das configs usada atualmente.
-	 */
-	public int getConfigsVersion() {
-		return 0;	
-	}
-
-
-	/**
 	 * Obtém um HashMap com as fontes disponíveis na App indexadas pelo seu ID.
 	 * @return HashMap com as fontes disponíveis na App indexadas pelo seu ID.
 	 */

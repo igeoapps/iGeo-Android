@@ -47,7 +47,7 @@ import com.bitcliq.igeo.core.datasource.IGEOSource;
 import com.bitcliq.igeo.ui.places.IGEOGenericSearchListAdapter;
 import com.bitcliq.igeo.ui.places.IGEOGenericSearchListItem;
 import com.bitcliq.igeo.ui.places.IGEOPlaces;
-import com.bitcliq.igeo.ui_patrimonio.R;
+import com.bitcliq.igeo.ui_ordenamento.R;
 import com.bitcliq.igeo.views.IGEOHorizontalScrollView;
 
 

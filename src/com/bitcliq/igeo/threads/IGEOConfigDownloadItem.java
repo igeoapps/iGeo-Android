@@ -33,7 +33,7 @@ public class IGEOConfigDownloadItem {
 	/**
 	 * Nome do ficheiro que vamos guardar no dispositivo
 	 */
-	String destinationFolder;
+	String finalName;
 	
 	/**
 	 * Identificador da fonte caso aplicável, "-1" caso contrário.
@@ -64,7 +64,7 @@ public class IGEOConfigDownloadItem {
 	 */
 	public IGEOConfigDownloadItem(String URL, String destination, String sID, String cID, IGEODonwloadItemType t) {
 		url = URL;
-        destinationFolder = destination;
+        finalName = destination;
         srcID = sID;
         catID = cID;
         type = t;
@@ -83,7 +83,7 @@ public class IGEOConfigDownloadItem {
 	 */
 	public IGEOConfigDownloadItem(String URL, String destination, String sID, String cID, IGEODonwloadItemType t, String hex, String hue) {
 		url = URL;
-        destinationFolder = destination;
+        finalName = destination;
         srcID = sID;
         catID = cID;
         type = t;
@@ -99,7 +99,7 @@ public class IGEOConfigDownloadItem {
 	public String toString() {
 		String result = "";
 		
-		result += "IGEOConfigDownloadItem (url = url, destinationFolder = destinationFolder, srcID = srcID, catID = catID, type = type)";
+		result += "IGEOConfigDownloadItem (url = url, finalName = finalName, srcID = srcID, catID = catID, type = type)";
 		
 		return result;
 	}

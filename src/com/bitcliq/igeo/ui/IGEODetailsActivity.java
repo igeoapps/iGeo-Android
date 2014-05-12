@@ -28,7 +28,7 @@ import com.bitcliq.igeo.core.IGEOConfigsManager;
 import com.bitcliq.igeo.core.IGEODataManager;
 import com.bitcliq.igeo.core.IGEOFileUtils;
 import com.bitcliq.igeo.core.datasource.IGEOGenericDataItem;
-import com.bitcliq.igeo.ui_patrimonio.R;
+import com.bitcliq.igeo.ui_ordenamento.R;
 
 /**
  * Atividade que apresenta um item que contém uma imagem, um titulo e outras

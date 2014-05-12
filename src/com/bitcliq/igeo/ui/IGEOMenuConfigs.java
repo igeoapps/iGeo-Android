@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.PreferenceActivity;
 
-import com.bitcliq.igeo.ui_patrimonio.R;
+import com.bitcliq.igeo.ui_ordenamento.R;
 
 /**
  * Esta é uma atividade utilizada para alterar as possíveis configurações da App.</br>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Património</string>
+    <!-- <string name="app_name">Património</string> -->
     <!-- <string name="app_name">Natureza</string> -->
-    <!-- <string name="app_name">Ordenamento</string> -->
+    <string name="app_name">Ordenamento</string>
     <string name="action_settings">Definições</string>
     <string name="search_radius">Raio de pesquisa</string>
 

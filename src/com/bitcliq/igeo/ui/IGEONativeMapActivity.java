@@ -43,7 +43,7 @@ import com.bitcliq.igeo.core.config.IGEOScreenConfig;
 import com.bitcliq.igeo.core.datasource.IGEOCategory;
 import com.bitcliq.igeo.core.datasource.IGEOGenericDataItem;
 import com.bitcliq.igeo.core.datasource.IGEOJSONServerReader;
-import com.bitcliq.igeo.ui_patrimonio.R;
+import com.bitcliq.igeo.ui_ordenamento.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
@@ -116,7 +116,7 @@ public class IGEONativeMapActivity extends FragmentActivity implements IGEOConfi
 	/**
 	 * Lista com o conteúdo a colocar em cada uma das legendas.
 	 */
-	private ArrayList<IGEOItemListCategory> dataItemsOptions;
+	private ArrayList<IGEOItemListCategory> categoriesOptions;
 
 	/**
 	 * Adapter usado pelo menu.
@@ -1132,10 +1132,10 @@ public class IGEONativeMapActivity extends FragmentActivity implements IGEOConfi
 		}
 		viewConvertArrayListOptions = null;
 
-		if(dataItemsOptions!=null){
-			dataItemsOptions.clear();
+		if(categoriesOptions!=null){
+			categoriesOptions.clear();
 		}
-		dataItemsOptions = null;
+		categoriesOptions = null;
 
 		System.gc();
 
@@ -1207,20 +1207,20 @@ public class IGEONativeMapActivity extends FragmentActivity implements IGEOConfi
 		menuView = (RelativeLayout) findViewById(R.id.viewMenu);
 		menuList = (ListView) findViewById(R.id.listViewMenu);
 
-		dataItemsOptions = new ArrayList<IGEOItemListCategory>();
+		categoriesOptions = new ArrayList<IGEOItemListCategory>();
 		ArrayList<IGEOCategory> sortedArrayCategories = sortCategoriesByID(IGEODataManager.getActualCategoriesListActualFilter());
 
 		for(IGEOCategory c : sortedArrayCategories){
 			
-			dataItemsOptions.add(new IGEOItemListCategory(c.categoryID,
+			categoriesOptions.add(new IGEOItemListCategory(c.categoryID,
 					IGEOConfigsManager.getPinIconForCategory(IGEODataManager.getActualSource().sourceID, c.categoryID),
 					IGEOConfigsManager.getPinIconForCategory(IGEODataManager.getActualSource().sourceID, c.categoryID)));
 
 		}
 
 		this.menuList = (ListView) findViewById(R.id.listViewMenu);
-		viewConvertArrayListOptions = getConvertListArrayCategories(dataItemsOptions);
-		listAdpArrayOptions = new IGEOCategoriesListAdapter(this,R.layout.items_list_categories_menu,dataItemsOptions,viewConvertArrayListOptions);
+		viewConvertArrayListOptions = getConvertListArrayCategories(categoriesOptions);
+		listAdpArrayOptions = new IGEOCategoriesListAdapter(this,R.layout.items_list_categories_menu,categoriesOptions,viewConvertArrayListOptions);
 		menuList.setAdapter(listAdpArrayOptions);
 		menuList.setOnItemClickListener(new OnItemClickListener()
 		{

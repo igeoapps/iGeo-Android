@@ -42,7 +42,7 @@ import com.bitcliq.igeo.core.config.IGEOScreenConfig;
 import com.bitcliq.igeo.core.datasource.IGEOCategory;
 import com.bitcliq.igeo.core.datasource.IGEOGenericDataItem;
 import com.bitcliq.igeo.core.datasource.IGEOJSONServerReader;
-import com.bitcliq.igeo.ui_patrimonio.R;
+import com.bitcliq.igeo.ui_ordenamento.R;
 
 
 /**

@@ -69,9 +69,9 @@ public class IGEOConfigsManager
 	 * Para gerar uma App diferente, além da alteração desta variável deverá ser alterado o ícone da App no ficheiro
 	 * AndroidManifest.xml, alterado o nome da App em res/values/strings.xml e o packagename da aplicação.
 	 */
-	private static final String CONFIGS_FILE_NAME_XML = "app_patrimonio_configs.xml";
+	//private static final String CONFIGS_FILE_NAME_XML = "app_patrimonio_configs.xml";
 	//private static final String CONFIGS_FILE_NAME_XML = "app_natureza_configs.xml";
-	//private static final String CONFIGS_FILE_NAME_XML = "app_ordenamento_configs.xml";
+	private static final String CONFIGS_FILE_NAME_XML = "app_ordenamento_configs.xml";
 
 
 
